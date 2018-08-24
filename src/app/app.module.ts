@@ -4,11 +4,11 @@ import { FormsModule} from '@angular/forms';
 import { RouterModule, Routes} from '@angular/router';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { ScrollEventModule } from 'ngx-scroll-event';
-
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { AutocompltePaginationComponent } from './autocomplte-pagination/autocomplte-pagination.component';
 import{ FilterPipe} from './app.filter';
+import {NgAutoCompleteModule} from "ng-auto-complete";
 
 const routes : Routes = ([
 { path : 'login', component : LoginComponent},
@@ -28,7 +28,8 @@ const routes : Routes = ([
     FormsModule,
     RouterModule.forRoot(routes),
     InfiniteScrollModule,
-    ScrollEventModule
+    ScrollEventModule,
+    NgAutoCompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]
